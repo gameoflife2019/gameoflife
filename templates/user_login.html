@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>User Login</title>
+  </head>
+  <body>
+    <h1>Game of Life</h1>
+    <p>Hello Player. Please use the login credentials provided to login</p>
+    <form action="/user_login" method="post">
+      <input type="text" placeholder="Username" name="username" value="{{ request.form.username }}">
+      <input type="text" placeholder="Password" name="passowrd" value="{{ request.form.password }}">
+      <input class="btn btn-default" type="submit" value="Login">
+    </form>
+
+
+  </body>
+</html>

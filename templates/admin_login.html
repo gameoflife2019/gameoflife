@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Login Page</title>
+  </head>
+  <body>
+    <div class="container"> #possible class=login
+      <h1>Enter Login Details</h1>
+      <br>
+      <form action="/admin_login" method="POST">
+        <input type="text" placeholder="Username" name="username" value="{{request.form.username}}">
+        <input type="password" placeholder="Password" name="password" value="{{request.form.password}}">
+        <input class="btn btn-default" type="submit" value="Login">
+      </form>
+      {% iferror %}
+        <p class="error"><strong>Error:</strong>{{ error }}</p>
+      {% endif %}
+    </div>
+  </body>
+</html>
